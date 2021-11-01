@@ -1,0 +1,22 @@
+name: deploy-dev
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install
+      - run: cd wp-content/themes/antbell
+      - run: npm install
+      - run: npm run build
+      - run: cd ../../../
+      - run: npm run deploy:dev
+        env:
+          FTP_DEPLOY_HOST: ${{ secrets.FTP_DEPLOY_HOST }}
+          FTP_DEPLOY_USERNAME: ${{ secrets.FTP_DEPLOY_USERNAME }}
+          FTP_DEPLOY_PASSWORD: ${{ secrets.FTP_DEPLOY_PASSWORD }}
+          FTP_DEPLOY_PORT: ${{ secrets.FTP_DEPLOY_PORT }}

@@ -1,0 +1,16 @@
+{
+  "name": "antbell",
+  "version": "0.0.1",
+  "description": "Repo for antbellmusic.com",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node deploy.js",
+    "deploy:dev": "node deploy.js --dev"
+  },
+  "author": "Hasani Rogers <hasani.rogers@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ssh2-sftp-client": "^7.0.2"
+  }
+}
