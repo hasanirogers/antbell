@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - name: Build Theme
-        working-directory: cd wp-content/themes/antbell
+        working-directory: cd ./wp-content/themes/antbell
         run: |
           npm install
           npm run build
