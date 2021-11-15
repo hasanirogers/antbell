@@ -1,11 +1,20 @@
-:root {
-  --color-rich-white: #fafafa;
-  --color-black: #000;
-  --page-width: 1170px;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.antbell {
+  body {
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  a {
+    font-family: 'Fjalla One', sans-serif;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+  }
 }

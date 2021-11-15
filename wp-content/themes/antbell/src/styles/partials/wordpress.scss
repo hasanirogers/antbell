@@ -1,0 +1,15 @@
+.antbell {
+  .wp-block-post-title {
+    margin: 2rem 0;
+  }
+
+  .wp-block-separator {
+    display: none;
+  }
+
+  &--blog {
+    .entry-title {
+      margin: 0;
+    }
+  }
+}
