@@ -45,6 +45,7 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@lrnwebcomponents/lrndesign-audio-player": "^2.0.10"
+    "@lrnwebcomponents/lrndesign-audio-player": "^2.0.10",
+    "kemet-ui": "^0.2.0"
   }
 }
