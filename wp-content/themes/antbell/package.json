@@ -11,12 +11,6 @@
   },
   "author": "Hasani Rogers <hasani.rogers@gmail.com>",
   "license": "MIT",
-  "eslintConfig": {
-    "extends": [
-      "@open-wc/eslint-config",
-      "eslint-config-prettier"
-    ]
-  },
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
@@ -25,12 +19,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.0",

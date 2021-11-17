@@ -5,9 +5,15 @@
 }
 
 .antbell {
-  body {
-    font-family: 'Fira Sans', sans-serif;
-  }
+  --color-black: #000000;
+  --color-rich-black: #282831;
+  --color-white: #ffffff;
+  --color-aqua: #28ccd2;
+  --color-gray: #3e3f4c;
+  --color-dark-gray: #3e3f4c;
+  --color-light-gray: #7a7e85;
+
+  font-family: 'Fira Sans', sans-serif;
 
   a {
     font-family: 'Fjalla One', sans-serif;

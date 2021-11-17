@@ -48,12 +48,15 @@
     .custom-logo-link {
       display: none;
       z-index: 1;
+      transition: opacity 1s ease-out;
     }
 
     .storefront-primary-navigation {
       position: fixed;
       width: 100%;
       top: 2rem;
+      transition: background-color 1s ease;
+      animation: fade-in 1s ease, slide-down 0.5s ease;
     }
 
     .site-header-cart .cart-contents {
@@ -102,13 +105,17 @@
 
   .footer-menu {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 
     span {
       position: absolute;
       opacity: 0;
       pointer-events: none;
+    }
+
+    p {
+      margin: 1rem 0;
     }
 
     li a {
@@ -237,11 +244,15 @@
     padding: 0.5rem 1rem;
   }
 
+  .site-footer {
+    padding-bottom: 4rem;
+  }
+
   .site-audio {
-    background-color: black;
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
     width: 33%;
   }
 
@@ -286,10 +297,6 @@
       }
     }
 
-    .site-content {
-      margin-top: 2rem;
-    }
-
     .site-search {
       &::before {
         content: ' ';
@@ -303,6 +310,14 @@
         pointer-events: none;
         background: #3e3f4c;
       }
+    }
+
+    .entry-header {
+      display: none;
+    }
+
+    .entry-content {
+      margin-top: 4rem;
     }
   }
 

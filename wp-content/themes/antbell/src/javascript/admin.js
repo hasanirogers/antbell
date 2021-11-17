@@ -1,1 +1,1 @@
-import './scripts/blocks/page-cta.js';
+import './scripts/blocks/page-background';

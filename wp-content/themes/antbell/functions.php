@@ -1,5 +1,8 @@
 <?php
 
+// includes
+include_once('inc/admin/gutenberg.php');
+
 // disable admin bar
 add_filter('show_admin_bar', '__return_false');
 
@@ -14,7 +17,7 @@ if (!is_admin()) {
 // enqueue admin bundles
 if (is_admin()) {
   wp_enqueue_style('admin-css', get_theme_file_uri('/bundles/admin.css'));
-  wp_enqueue_script('admin-js', get_theme_file_uri('/bundles/admin.js'), array('wp-blocks', 'wp-editor', 'wp-components'), false, true);
+  wp_enqueue_script('admin-js', get_theme_file_uri('/bundles/admin.js'), array('wp-blocks', 'wp-block-editor', 'wp-components', 'wp-element'), false, true);
 }
 
 // enqueue fonts

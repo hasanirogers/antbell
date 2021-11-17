@@ -1,0 +1,104 @@
+.page-background {
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  background-size: 100% 100%;
+
+  &__container {
+    width: 100%;
+    max-width: 66.6rem;
+    padding: 0;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    transition: all 1s ease 0.5s;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .wp-block-image,
+  .wp-block-column,
+  .wp-block-columns {
+    margin: 0 !important;
+  }
+
+  .wp-block-columns {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .mailpoet_form {
+    form {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 20%;
+      max-width: 50%;
+      margin: auto;
+      padding: 0 !important;
+    }
+
+    input[type="email"] {
+      padding: 0.5rem 1rem !important;
+    }
+
+    input[type="submit"] {
+      color: var(--color-aqua);
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+      border: 2px solid var(--color-aqua) !important;
+    }
+
+    input[type="submit"]:hover {
+      color: var(--color-white);
+      background: var(--color-aqua);
+      border: 2px solid var(--color-aqua) !important;
+    }
+
+    .mailpoet_paragraph {
+      height: 100%;
+      display: flex;
+      margin-bottom: 0 !important;
+    }
+
+    .mailpoet_message {
+      grid-column: span 2;
+    }
+
+    .parsley-errors-list {
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.columns-40-60 {
+    .wp-block-columns {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+    }
+  }
+}
+
+// only on frontend
+.antbell {
+  .page-background {
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+
+    &__container {
+      opacity: 0;
+    }
+
+    &__container--visible {
+      opacity: 1;
+    }
+  }
+}
