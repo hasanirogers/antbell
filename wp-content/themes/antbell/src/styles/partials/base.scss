@@ -23,4 +23,20 @@
   ol {
     margin: 0;
   }
+
+  button,
+  .button {
+    font-family: "Fjalla One", sans-serif;
+    color: var(--color-aqua);
+    background: transparent;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-aqua);
+  }
+
+  button:hover,
+  .button:hover {
+    color: var(--color-white);
+    background: var(--color-aqua);
+    border: 2px solid var(--color-aqua);
+  }
 }

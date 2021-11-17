@@ -1,7 +1,6 @@
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach(entry => {
-      console.log(entry);
       if (entry.intersectionRatio > 0.5) {
         entry.target.classList.add('page-background__container--visible');
       } else {

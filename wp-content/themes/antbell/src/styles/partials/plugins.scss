@@ -1,0 +1,31 @@
+.antbell {
+  .the_champ_outer_login_container {
+    .theChampLogin {
+      border: none;
+      margin: 0;
+      display: inline-block;
+      float: none;
+    }
+
+    .the_champ_login_ul {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        float: none;
+      }
+    }
+
+    .the_champ_social_login_title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .woocommerce-form__label-for-checkbox {
+    margin: 2rem 0;
+  }
+
+  .woocommerce > .the_champ_outer_login_container {
+    display: none;
+  }
+}
