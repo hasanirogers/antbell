@@ -2,6 +2,7 @@
 
 // includes
 include_once('inc/admin/gutenberg.php');
+include_once('inc/admin/customize.php');
 
 // disable admin bar
 add_filter('show_admin_bar', '__return_false');

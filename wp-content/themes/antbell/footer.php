@@ -62,13 +62,25 @@
 
 </div><!-- #page -->
 
-<section class="site-audio">
-  <lrndesign-audio-player
-    color="#28ccd2"
-    title="Get the title"
-    src="http://antbell.local/wp-content/uploads/2021/10/Mega-Man-X8-Booster-Forest-Ride-Armor-Cyclops.mp3">
-  </lrndesign-audio-player>
-</section>
+<?php
+  $trackPostID = get_theme_mod('site-track-url');
+  $trackData = get_post($trackPostID);
+  $trackURL = wp_get_attachment_url($trackPostID);
+  $trackTitle = get_the_title($trackPostID);
+  $trackIsMP3 = strpos($trackURL, '.mp3') > 0;
+
+  if ($trackIsMP3) {
+    ?>
+      <section class="site-audio">
+        <lrndesign-audio-player
+          color="#28ccd2"
+          title="<?php echo $trackTitle; ?>"
+          src="<?php echo $trackURL; ?>">
+        </lrndesign-audio-player>
+      </section>
+    <?php
+  }
+?>
 
 <?php wp_footer(); ?>
 
