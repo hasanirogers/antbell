@@ -1,8 +1,16 @@
+@use 'include-media/dist/_include-media.scss' as *;
+
 .page-background {
   padding: 2rem;
   display: flex;
   position: relative;
-  background-size: 100% 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include media('>tablet') {
+    background-size: 100% 100%;
+  }
 
   &__container {
     width: 100%;
@@ -39,9 +47,12 @@
       display: grid;
       gap: 1rem;
       grid-template-columns: 1fr 20%;
-      max-width: 50%;
       margin: auto;
       padding: 0 !important;
+
+      @include media('>tablet') {
+        max-width: 50%;
+      }
     }
 
     input[type="email"] {

@@ -1,3 +1,5 @@
+@use 'include-media/dist/_include-media.scss' as *;
+
 .antbell {
   kemet-scroll-nav {
     position: static;
@@ -7,7 +9,10 @@
         z-index: 9;
         padding: 2rem 0;
         top: 0;
-        background-color: var(--color-rich-black);
+
+        @include media('>tablet') {
+          background-color: var(--color-rich-black);
+        }
       }
     }
   }
