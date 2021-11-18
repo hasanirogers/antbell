@@ -33,6 +33,19 @@
     padding-top: 0;
     position: fixed;
 
+    @include media('>tablet') {
+      &::after {
+        content: "";
+        width: 100%;
+        height:  var(--header-height);
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+        background: rgba(40, 40, 49, .9);
+      }
+    }
+
     .site-search {
       .widget_product_search {
         display: none;
@@ -324,17 +337,6 @@
 
       @include media('>tablet') {
         background-size: 100% 100%;
-      }
-
-      &::after {
-          content: "";
-          width: 100%;
-          height:  var(--header-height);
-          position: fixed;
-          top: 0;
-          z-index: -1;
-          overflow: hidden;
-          background: rgba(40, 40, 49, .9);
       }
 
       .site-branding {
