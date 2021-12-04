@@ -14,8 +14,8 @@ if (isDev) {
   remoteDir = '/var/www/antbell.hasanirogers.me/public_html/wp-content/themes';
   filterDirs = /^(?!.*(.git|.github|node_modules))/gm;
 } else {
-  localDir = '/';
-  remoteDir = '/var/www/antbellmusic.com/public_html';
+  localDir = '/wp-content/themes';
+  remoteDir = '/var/www/antbellmusic.com/public_html/wp-content/themes';
   filterDirs = /^(?!.*(.git|.github|node_modules))/gm;
 }
 

@@ -9,7 +9,7 @@
     "eslint": "eslint --ext .js,.html src/** --ignore-path .gitignore",
     "prettier": "prettier \"src/**/*.js\" --check --ignore-path .gitignore"
   },
-  "author": "Hasani Rogers <hasani.rogers@gmail.com>",
+  "author": "Hasani Rogers <dev@hasanirogers.me>",
   "license": "MIT",
   "prettier": {
     "singleQuote": true,
