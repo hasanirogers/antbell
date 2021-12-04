@@ -1,1 +1,1 @@
-import './scripts/hello.js';
+import './scripts/blocks/page-background';

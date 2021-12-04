@@ -1,0 +1,56 @@
+.antbell {
+  .wp-block-post-title {
+    margin: 2rem 0;
+  }
+
+  .wp-block-separator {
+    display: none;
+  }
+
+  .wp-block-button {
+    .wp-block-button__link {
+      color: var(--color-aqua) !important;
+      transition: all 0.3s ease-in-out;
+      border: 2px solid var(--color-aqua) !important;
+    }
+
+    &:hover .wp-block-button__link {
+      color: var(--color-white) !important;
+      background-color: var(--color-aqua) !important;
+    }
+  }
+
+  .has-aqua-color {
+    color: var(--color-aqua);
+  }
+
+  .has-gray-color {
+    color: var(--color-gray);
+  }
+
+  .has-dark-gray-color {
+    color: var(--color-dark-gray);
+  }
+
+  .has-light-gray-color {
+    color: var(--color-light-gray);
+  }
+
+  .padding--2rem {
+    padding: 2rem;
+  }
+
+  .padding--4rem {
+    padding: 4rem;
+  }
+
+  .padding--6rem {
+    padding: 6rem;
+  }
+
+  &--blog {
+    .entry-title {
+      margin: 0;
+    }
+  }
+}

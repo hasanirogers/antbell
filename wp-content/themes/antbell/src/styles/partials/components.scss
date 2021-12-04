@@ -1,0 +1,26 @@
+@use 'include-media/dist/_include-media.scss' as *;
+
+.antbell {
+  kemet-scroll-nav {
+    position: static;
+
+    &[transform] {
+      .storefront-primary-navigation {
+        z-index: 9;
+        padding: 2rem 0;
+        top: 0;
+
+        @include media('>tablet') {
+          background-color: var(--color-rich-black);
+        }
+      }
+    }
+  }
+
+  lrndesign-audio-player {
+    background-color: var(--color-aqua);
+    animation:
+      3s ease 0s normal forwards 1 fade-in-delay,
+      3s ease 0s normal forwards 1 slide-up-delay;
+  }
+}
