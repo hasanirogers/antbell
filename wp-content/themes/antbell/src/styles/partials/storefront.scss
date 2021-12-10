@@ -154,6 +154,7 @@
     li a {
       content: '';
       display: inline-block;
+      background-size: 100%;
       background-repeat: no-repeat;
       transform: scale(1.5);
     }
@@ -192,6 +193,12 @@
       width: 9px;
       height: 18px;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%233b5998' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 18' class='icon'%3e%3cpath fill-rule='evenodd' d='M1.907 18V8.999H0V5.897h1.907V4.035C1.907 1.505 2.984 0 6.044 0h2.547v3.103H7c-1.191 0-1.27.433-1.27 1.242l-.005 1.552h2.885L8.27 9H5.724V18H1.907z'%3e%3c/path%3e%3c/svg%3e");
+    }
+
+    .LinkTree a {
+      width: 15px;
+      height: 12px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg height='2084' viewBox='-7.19 -5.39 814.38 679.39' width='2500' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m297.53 18.87c-13.49-24.26-48.54-24.26-62.02 0l-231.91 420.58c-10.79 21.57 5.39 45.83 29.66 45.83h156.4v159.06c0 16.18 13.49 29.66 29.67 29.66h91.68c16.18 0 29.66-13.48 29.66-29.66v-159.06h-43.14c-18.88 0-32.36-13.48-35.06-29.66 0-5.39 0-10.78 2.7-16.23l129.44-234.55z' fill='%2339e09b'/%3e%3cpath d='m502.47 18.87c13.49-24.26 48.54-24.26 62.02 0l231.91 420.58c10.79 21.57-5.39 45.83-29.66 45.83h-153.71v159.06c0 16.18-13.48 29.66-29.69 29.66h-97.05c-16.18 0-29.66-13.48-29.66-29.66v-159.06h43.15c18.87 0 32.35-13.48 35.05-29.66 0-5.39 0-10.78-2.7-16.23l-129.43-234.49z' fill='%2328bf7b'/%3e%3c/svg%3e");
     }
   }
 
@@ -355,6 +362,19 @@
         z-index: 0;
         animation: fade-in 2s ease;
 
+        &::before {
+          content: ' ';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 50vh;
+          opacity: 0.5;
+          pointer-events: none;
+          background: #3e3f4c;
+        }
+
         @include media('>tablet') {
           z-index: 1;
         }
@@ -363,23 +383,11 @@
         .custom-logo,
         .custom-logo-link {
           display: inline-block;
-          transform: scale(1.25);
-        }
-      }
-    }
 
-    .site-search {
-      &::before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 50vh;
-        opacity: 0.5;
-        pointer-events: none;
-        background: #3e3f4c;
+          @include media('>tablet') {
+            transform: scale(1.25);
+          }
+        }
       }
     }
 
