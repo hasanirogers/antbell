@@ -3,6 +3,8 @@
 // includes
 include_once('inc/admin/gutenberg.php');
 include_once('inc/admin/customize.php');
+include_once('inc/overrides/storefront-primary-navigation.php');
+include_once('inc/classes/primary-menu-walker.php');
 
 // disable admin bar
 add_filter('show_admin_bar', '__return_false');

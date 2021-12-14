@@ -62,6 +62,7 @@
 
     .storefront-primary-navigation {
       position: fixed;
+      z-index: 9;
       width: 100%;
       top: 2rem;
       transition: background-color 1s ease;
@@ -217,65 +218,6 @@
 
     select {
       padding: 0.5rem 1rem;
-    }
-  }
-
-  .menu-item {
-    &::before {
-      @extend %link;
-
-      top: 0;
-      right: 100%;
-      bottom: auto;
-      left: 1px;
-      height: 1px;
-    }
-
-    &::after {
-      @extend %link;
-
-      top: auto;
-      left: 100%;
-      right: 0;
-      height: 1px;
-    }
-
-    a::before {
-      @extend %link;
-
-      display: inline-block;
-      top: 0;
-      right: auto;
-      bottom: 100%;
-      width: 1px;
-      left: 0;
-    }
-
-    a::after {
-      @extend %link;
-
-      display: inline-block;
-      top: 0;
-      right: 0;
-      bottom: 100%;
-      left: auto;
-      width: 1px;
-    }
-
-    &:hover::before {
-      right: 1px;
-    }
-
-    &:hover:after {
-      left: 0;
-    }
-
-    a:hover::before {
-      bottom: 1px;
-    }
-
-    a:hover::after {
-      bottom: 1px;
     }
   }
 
