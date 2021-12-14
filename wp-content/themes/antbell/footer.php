@@ -17,7 +17,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
       <div class="site-copyright">
-        <p>&copy; <?php echo get_bloginfo('name') . ' ' . date("Y"); ?>
+        <p><?php echo get_theme_mod('site-copyright'); ?>
       </div>
 
 			<?php
